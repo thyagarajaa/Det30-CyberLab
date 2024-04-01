@@ -1,0 +1,6 @@
+2 <-- Terminal Number
+Type Passcode in below (Current is 12345):
+CyberLab
+Type information you want to give out below:
+Cyber Lab 2 is next week
+(EX Move to right room to find number of places for cesar cypher)
