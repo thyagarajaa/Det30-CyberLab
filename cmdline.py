@@ -20,9 +20,9 @@ print(passcode)
 information_1 = lineArray[5]
 def clearCMD() -> None:
     try:
-            clear = lambda: os.system('cls')
-    except:
             clear = lambda: os.system('clear')
+    except:
+            clear = lambda: os.system('cls')
     clear()
 
 clearCMD()
