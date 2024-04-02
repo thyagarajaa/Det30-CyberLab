@@ -56,15 +56,20 @@ def main() -> None:
         print("\n \n Data Uplink\n")
         countdown(int(5))
         clearCMD()
-        print("\n TOP SECRET INFO")
+        print("\n TOP SECRET INFO\n")
               
-        print("\n" + " " + information_1 + "\n TOP SECRET\n")
+        for i in range(5, len(lineArray)):
+                information_1 = lineArray[i]
+                print(" " + information_1 + "\n ")
+        
+        
+        
+        print("\n TOP SECRET  \n")
 
                 #print(" Proceded to terminal #2 for further instructions.\n")
         print(" Warning this message will self destruct in 30s\n")
         countdown(int(30))
         clearCMD()     
-        #passcode = ")0000234"
  
 
 main()
