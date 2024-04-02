@@ -1,4 +1,5 @@
-import os, time
+import os, time, subprocess
+from os import system, name
 
 global passcode 
 passcode = "0"
@@ -16,19 +17,22 @@ with open("sys.txt") as file_in:
 terminal_number = lineArray[1]
 terminal_number = terminal_number[0]
 passcode = lineArray[3]
-print(passcode)
+#print(passcode)
 information_1 = lineArray[5]
 def clearCMD() -> None:
     try:
-            clear = lambda: os.system('clear')
+        if name != 'nt':
+                os.system('clear')
+        else:
+                os.system('cls')
     except:
-            clear = lambda: os.system('cls')
-    clear()
+        # For Windows
+        os.system('cls')
 
 clearCMD()
 
 def loop() -> str:
-        print("\n Terminal Number "+  " " + terminal_number + " Access Restricted.\n")
+        print("\n Terminal Number " + terminal_number + " Access Restricted.\n")
         print(" Enter Passcode to continue! ")
         text = input(" Password: ")
         text = text + "\n"
@@ -54,17 +58,15 @@ def main() -> None:
         countdown(int(2))
         clearCMD()
         print("\n \n Data Uplink\n")
-        countdown(int(5))
+        countdown(int(2))
         clearCMD()
         print("\n TOP SECRET INFO\n")
               
         for i in range(5, len(lineArray)):
                 information_1 = lineArray[i]
-                print(" " + information_1 + "\n ")
-        
-        
-        
-        print("\n TOP SECRET  \n")
+                print(" " + information_1)
+
+        print(" TOP SECRET  \n")
 
                 #print(" Proceded to terminal #2 for further instructions.\n")
         print(" Warning this message will self destruct in 30s\n")
